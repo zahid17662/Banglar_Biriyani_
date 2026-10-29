@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600&display=swap");
+@import "tailwindcss";
+
+/* Banglar Biriyani design tokens */
+@theme {
+  --color-brand: #d70f64;
+  --color-brand-hover: #b80c55;
+  --color-brand-light: #fdf2f7;
+  --color-crimson: #d70f64;
+  --color-crimson-dark: #b80c55;
+  --color-charcoal: #202124;
+  --color-white: #ffffff;
+  --color-alabaster: #f8f7f5;
+  --color-saffron: #ffc72c;
+  --color-slate: #5c5f66;
+  --color-line: #e7e4df;
+
+  --font-display: "Oswald", "Bebas Neue", Impact, sans-serif;
+  --font-sans: "Inter", "Plus Jakarta Sans", system-ui, sans-serif;
+
+  --radius-card: 1rem;
+  --shadow-card: 0 1px 2px rgb(32 33 36 / 0.06), 0 8px 24px -12px rgb(32 33 36 / 0.18);
+}
+
+@layer base {
+  body {
+    @apply bg-alabaster text-charcoal font-sans antialiased;
+  }
+}
+
+@layer components {
+  .text-display {
+    @apply font-display font-bold uppercase tracking-wide leading-none;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
